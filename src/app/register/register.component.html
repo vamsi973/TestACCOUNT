@@ -1,0 +1,98 @@
+<div id="login">
+    <h3 class="text-center text-white pt-5">Register form</h3>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="col-md-12">
+                    <form id="login-form" class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <h3 class="text-center text-info">Register</h3>
+                        <div class="form-group">
+                            <label for="Name" class="text-info">Name:</label><br>
+                            <input type="text" formControlName="Name" name="Name" class="form-control">
+                        </div>
+                        <ng-container *ngFor="let validation of validation_messages.Name">
+                            <div class="error-message" *ngIf="registerForm.get('Name').hasError(validation.type) &&
+                        (registerForm.get('Name').dirty || registerForm.get('Name').touched)">
+                                {{ validation.message }}
+                            </div>
+                        </ng-container>
+
+                        <div class="form-group">
+                            <label for="Gender" class="text-info">Gender:</label><br>
+
+                            <select name="Gender" for="Gender" formControlName='Gender' class="form-control">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="others">Other</option>
+                                <option value="not prefered to say">No Sharing</option>
+                            </select>
+
+                            <!-- <input type="text" formControlName="Gender" name="Gender" class="form-control"> -->
+                        </div>
+                        <ng-container *ngFor="let validation of validation_messages.Gender">
+                            <div class="error-message" *ngIf="registerForm.get('Gender').hasError(validation.type) &&
+                        (registerForm.get('Gender').dirty || registerForm.get('Gender').touched)">
+                                {{ validation.message }}
+                            </div>
+                        </ng-container>
+                        <div class="form-group">
+                            <label for="MobileNumber" class="text-info">Mobile Number:</label><br>
+                            <input type="number" formControlName="MobileNumber" name="MobileNumber" id="MobileNumber"
+                                class="form-control">
+                        </div>
+                        <ng-container *ngFor="let validation of validation_messages.MobileNumber">
+                            <div class="error-message" *ngIf="registerForm.get('MobileNumber').hasError(validation.type) &&
+                        (registerForm.get('MobileNumber').dirty || registerForm.get('MobileNumber').touched)">
+                                {{ validation.message }}
+                            </div>
+                        </ng-container>
+                        <div class="form-group">
+                            <label for="emailId" class="text-info">Email Id:</label><br>
+                            <input type="email" formControlName="emailId" name="emailId" class="form-control">
+
+
+                        </div>
+                        <ng-container *ngFor="let validation of validation_messages.emailId">
+                            <div class="error-message" *ngIf="registerForm.get('emailId').hasError(validation.type) &&
+                        (registerForm.get('emailId').dirty || registerForm.get('emailId').touched)">
+                                {{ validation.message }}
+                            </div>
+                        </ng-container>
+                        <div class="form-group">
+                            <label for="Designation" class="text-info">Designation:</label><br>
+                          
+                            <select name="Gender" for="Gender" formControlName='Designation' class="form-control">
+                                <option value="admin">Admin</option>
+                                <option value="manager">Manager</option>
+                                <option value="staff">Staff </option>
+                            </select>
+                        </div>
+                        <ng-container *ngFor="let validation of validation_messages.Designation">
+                            <div class="error-message" *ngIf="registerForm.get('Designation').hasError(validation.type) &&
+                        (registerForm.get('Designation').dirty || registerForm.get('Designation').touched)">
+                                {{ validation.message }}
+                            </div>
+                        </ng-container>
+                        <div class="form-group">
+                            <label for="password" class="text-info">Password:</label><br>
+                            <input type="password" formControlName="password" name="password" id="password"
+                                class="form-control">
+                        </div>
+                        <ng-container *ngFor="let validation of validation_messages.password">
+                            <div class="error-message" *ngIf="registerForm.get('password').hasError(validation.type) &&
+                        (registerForm.get('password').dirty || registerForm.get('password').touched)">
+                                {{ validation.message }}
+                            </div>
+                        </ng-container>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">
+                                Register
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

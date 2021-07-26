@@ -1,0 +1,16 @@
+<mat-nav-list style="background:#2c3d93">
+    <div class="profile-card" *ngIf='!sideBarToggle'>
+        <div class="header">
+            <h2>Test</h2>
+        </div>
+        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="viewmasterio">
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item *ngFor='let route of sideMenuItemsList' (click)='navigateTo(route.path)' style="display:flex;">
+        <span [class]="route.icon" style="display: flex;align-items: center;justify-content: center;"></span>
+        <span *ngIf='!sideBarToggle'>{{route.title}}</span>
+    </a>
+</mat-nav-list>
+        

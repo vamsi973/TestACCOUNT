@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="headerAlign">
+    <button mat-icon-button class='bgRemove' (click)="toggleMenuFunc()">
+
+      <img src="../../assets/menu.svg" class="hamIcon" />
+    </button>
+
+    <span> Test </span>
+
+
+    <ul>
+      <li>
+        <button mat-button [matMenuTriggerFor]="menu" class="bgRemove">
+          <i class="fa fa-user bgRemove"></i>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)='logout()'>
+            <i class="fa fa-sign-out bgRemove" aria-hidden="true"></i>
+            Sign out
+          </button>
+        </mat-menu>
+      </li>
+    </ul>
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,148 @@
+.example-container {
+    width: 100%;
+    height: calc(100% - 64px);
+  }
+  
+  mat-drawer {
+    background: #2c3d93;
+  }
+
+  .hrLine {
+    background: #6d789d;
+  }
+  .vertical-menu {
+    width: 225px;
+    padding: 15px;
+  }
+  
+  .vertical-menu a {
+    color: #6d789d;
+    font-weight: 400;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #ccc;
+  }
+  
+  .vertical-menu a.active {
+    color: white;
+    font-weight: 500;
+    outline: none;
+  }
+
+  .social-sections {
+    padding: 15px;
+    height: 110px;
+  }
+
+  .social-sections i.fa{
+    color: #2c3d93;
+  }
+
+  .social-sections a {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 8px 12px;
+    margin-left: 5px;
+  }
+
+  .w3-sidebar {
+    height: 100%;
+    width: 240px;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 100;
+    overflow: auto;
+}
+
+.w3-card, .w3-card-2 {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.w3-animate-left {
+  position: relative;
+  animation: animateleft 0.4s;
+}
+
+@keyframes animateleft {
+	from {
+		left: -240px;
+		opacity: 0
+	}
+	to {
+		left: 0;
+		opacity: 1
+	}
+}
+
+.closeIcon {
+  width: 20px;
+  float: right; 
+  margin: 15px;
+  cursor: pointer;
+}
+
+.sidebar {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+  top: 63px;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 15px 15px 15px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  background: #c5bfbf;
+  color: #ffffff;
+}
+
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+
+
+.minisidebar{
+  position: relative;
+  margin-left: 80px;
+  height: 100%;
+}
+
+.extendsidebar{
+  position: relative;
+  margin-left: 250px;
+  height: 100%;
+}
+
+.newsidebar{
+  position: absolute;
+  top:64px;
+  height: 100%;
+}
+
+.miniSideBar{
+  position: absolute ;
+  width: 80px ;
+  overflow: hidden;
+  top:64px;
+  height: 100%;
+}
+

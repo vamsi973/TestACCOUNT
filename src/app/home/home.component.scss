@@ -1,0 +1,28 @@
+.graph-card mat-card-title{
+    background: #89d6d5;
+    padding: 5px 0;
+    border-radius: 0;
+    width: 100%;
+    font-size:18px;
+}
+
+.p5{
+    padding: 5px;
+}
+
+.card{
+    margin: 0 10px;
+}
+.dropdown-container{
+    height: 50px;
+    text-align: center;
+}
+.dropdown-container mat-select{
+    width: 100%;
+}
+.dropdown-container mat-form-field{
+    margin-right: 20px;
+}
+.export-card{
+    margin-bottom: 10px;
+}

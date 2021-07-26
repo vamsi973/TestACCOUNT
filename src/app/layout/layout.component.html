@@ -1,0 +1,10 @@
+<app-header (toggleMenuEvent)="toggleMenuEvent($event)"></app-header>
+
+
+<div [ngClass]='showMinisidebar==true ?"miniSideBar":"newsidebar"'>
+  <app-sidebar [sideBarToggle]="showMinisidebar"></app-sidebar>
+</div>
+
+<div class="containerV" [ngClass]='showMinisidebar==true ?"minisidebar":"extendsidebar"'>
+  <router-outlet></router-outlet>
+</div>

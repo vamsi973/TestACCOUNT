@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Basic Table</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>gender</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Designation</th>
+                <th *ngIf='userRole=="admin"'>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let item of usersList'>
+                <td>{{item.name}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.designation}}</td>
+                <td *ngIf='userRole=="admin"' (click)="delete(item)">Delete</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
